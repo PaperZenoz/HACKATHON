@@ -6,7 +6,7 @@ $(window).on("load", function () {
  
  $(document).ready(function () {
     function faq() {
-       var $head = $('.faq__head')
+       const $head = $('.faq__head')
  
        $head.on('click', function () {
           $(this).siblings('.faq__body').fadeToggle()
