@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Syncopate&display=swap');
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@font-face {
+	font-family: "Syncopate";
+	src: url("../fonts/Syncopate.otf") format("opentype");
+}
 
 .banner__data,
 .banner__title,
@@ -195,7 +200,8 @@ a {
 }
 
 html {
-	scroll-behavior: smooth
+	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -230,7 +236,7 @@ body {
 
 @media screen and (max-width: 639px) {
 	body {
-		font-size: 16px
+		font-size: 12px
 	}
 }
 
@@ -500,7 +506,8 @@ p {
 	cursor: pointer;
 	width: max-content;
 	padding: 0 60px;
-	font-family: 'Montserrat', sans-serif
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
 }
 
 @media screen and (max-width: 1023px) {
@@ -735,14 +742,27 @@ p {
 
 @media screen and (max-width: 1023px) {
 	.banner__header {
-		flex-direction: column;
 		gap: 15px
+	}
+
+
+}
+
+@media screen and (max-width: 639px){
+	.banner__logo img{
+		width: 73px;
 	}
 }
 
+
+
+
+
 .banner__data {
 	font-size: 32px;
-	font-family: 'Syncopate', sans-serif
+	font-family: 'Syncopate', sans-serif;
+	font-weight: lighter;
+
 }
 
 @media screen and (max-width: 1919px) {
@@ -765,7 +785,7 @@ p {
 
 @media screen and (max-width: 639px) {
 	.banner__data {
-		font-size: 20px
+		font-size: 12px
 	}
 }
 
@@ -876,7 +896,16 @@ p {
 	height: 50px;
 	color: rgba(86, 86, 86, 0.5);
 	padding: 0 15px;
-	border-bottom: 2px solid #000
+	border-bottom: 2px solid #000;
+	font-weight: bold;
+	justify-content: center;
+	position: relative;
+}
+
+.about__head > span{
+	position: absolute;
+	left: 15px;
+	top: 5px;
 }
 
 .about__body {
@@ -893,7 +922,8 @@ p {
 	height: 130px;
 	background-color: #000;
 	width: 100vw;
-	overflow: hidden
+	overflow: hidden;
+	background-image: url("../../images/running-line/1.png");
 }
 
 @media screen and (max-width: 1919px) {
@@ -1181,17 +1211,17 @@ p {
 	border-bottom: 3px solid #000
 }
 
-.person__sign:before {
-	content: '';
-	width: 49px;
-	height: 80px;
-	background-image: url("../../images/person/arrow.webp");
-	background-size: contain;
-	right: 40px;
-	top: 100%;
-	background-repeat: no-repeat;
-	position: absolute
-}
+/*.person__sign:before {*/
+/*	content: '';*/
+/*	width: 49px;*/
+/*	height: 80px;*/
+/*	background-image: url("../../images/person/arrow.webp");*/
+/*	background-size: contain;*/
+/*	right: 40px;*/
+/*	top: 100%;*/
+/*	background-repeat: no-repeat;*/
+/*	position: absolute*/
+/*}*/
 
 @media screen and (max-width: 1023px) {
 	.person__sign:before {
@@ -1239,9 +1269,27 @@ p {
 	padding-right: 80px
 }
 
+@media screen and (max-width: 1023px){
+	.person__general-text {
+		padding-right: 0px
+	}
+	.person__wrap{
+		text-align: center;
+	}
+}
+
+
+
+
+
 .info {
 	background-color: #000;
 	color: #fff
+}
+
+.info a{
+	color: white;
+	border-bottom: 2px solid white;
 }
 
 .info__list li {
@@ -1267,30 +1315,6 @@ p {
 	cursor: pointer
 }
 
-@media screen and (max-width: 1919px) {
-	.faq__head {
-		padding-top: px
-	}
-}
-
-@media screen and (max-width: 1365px) {
-	.faq__head {
-		padding-top: px
-	}
-}
-
-@media screen and (max-width: 1023px) {
-	.faq__head {
-		padding-top: px
-	}
-}
-
-@media screen and (max-width: 639px) {
-	.faq__head {
-		padding-top: px
-	}
-}
-
 .faq__head:before {
 	content: '';
 	width: 40px;
@@ -1305,11 +1329,11 @@ p {
 @media screen and (max-width: 1023px) {
 	.faq__head:before {
 		transform: scale(0.7);
-		top: 25px
+		top: 35%
 	}
 }
 
-.faq__head__head.open:before {
+.faq__head.open:before {
 	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='white'/%3E%3Cmask id='mask0_202_5' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='8' y='8' width='24' height='24'%3E%3Crect x='8' y='8' width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_202_5)'%3E%3Cpath d='M13 21V19H27V21H13Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A")
 }
 
